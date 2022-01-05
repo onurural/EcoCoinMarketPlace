@@ -4,18 +4,20 @@ using EcoCoinMarketPlace.Controller;
 using System.Windows.Forms;
 using System.Threading;
 using EcoCoinMarketPlace.UIComponents;
+using EcoCoinMarket.Models.LoginRegister;
 
 namespace EcoCoinMarketPlace
 {
     public partial class Form1 : Form
     {
 
-        public Form1()
+        public Form1(bool isLogin)
         {
+            
             bool isConnected = RestApiController.InitializeRestfulApi();
 
 
-            InitializeComponent();
+            InitializeComponent(isLogin);
             if (isConnected)
             {
                 RestApiController.MakeRequest(RequestType.assets);
@@ -138,6 +140,16 @@ namespace EcoCoinMarketPlace
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

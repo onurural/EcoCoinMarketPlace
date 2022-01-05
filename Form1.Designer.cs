@@ -3,6 +3,7 @@ namespace EcoCoinMarketPlace
 {
     partial class Form1
     {
+        
 
 
 
@@ -30,7 +31,7 @@ namespace EcoCoinMarketPlace
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(bool isLogin)
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -103,34 +104,30 @@ namespace EcoCoinMarketPlace
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.coinRow1 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow2 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow3 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow4 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow5 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow6 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow7 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow8 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow9 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow10 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow11 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow12 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow13 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow14 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow15 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow16 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow17 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow18 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow19 = new EcoCoinMarketPlace.UIComponents.CoinRow();
-            this.coinRow20 = new EcoCoinMarketPlace.UIComponents.CoinRow();
+            this.coinRow1 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow2 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow3 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow4 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow5 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow6 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow7 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow8 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow9 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow10 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow11 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow12 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow13 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow14 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow15 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow16 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow17 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow18 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow19 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.coinRow20 = new EcoCoinMarketPlace.UIComponents.CoinRow(isLogin);
+            this.button1 = new System.Windows.Forms.Button();
             this.trendCoinsTableLayoutPanel.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -190,7 +187,7 @@ namespace EcoCoinMarketPlace
             this.trendCoinsLabel.ForeColor = System.Drawing.Color.Black;
             this.trendCoinsLabel.Location = new System.Drawing.Point(3, 0);
             this.trendCoinsLabel.Name = "trendCoinsLabel";
-            this.trendCoinsLabel.Size = new System.Drawing.Size(86, 43);
+            this.trendCoinsLabel.Size = new System.Drawing.Size(69, 43);
             this.trendCoinsLabel.TabIndex = 0;
             this.trendCoinsLabel.Text = "Trend Coins";
             // 
@@ -539,7 +536,7 @@ namespace EcoCoinMarketPlace
             this.trendExchangeLabel.ForeColor = System.Drawing.Color.Black;
             this.trendExchangeLabel.Location = new System.Drawing.Point(3, 0);
             this.trendExchangeLabel.Name = "trendExchangeLabel";
-            this.trendExchangeLabel.Size = new System.Drawing.Size(206, 35);
+            this.trendExchangeLabel.Size = new System.Drawing.Size(164, 28);
             this.trendExchangeLabel.TabIndex = 0;
             this.trendExchangeLabel.Text = "Trend Exchanges";
             // 
@@ -628,7 +625,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange1Name.AutoSize = true;
             this.trendExchange1Name.Location = new System.Drawing.Point(3, 0);
             this.trendExchange1Name.Name = "trendExchange1Name";
-            this.trendExchange1Name.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange1Name.Size = new System.Drawing.Size(41, 13);
             this.trendExchange1Name.TabIndex = 0;
             this.trendExchange1Name.Text = "label44";
             // 
@@ -637,7 +634,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange1Url.AutoSize = true;
             this.trendExchange1Url.Location = new System.Drawing.Point(177, 0);
             this.trendExchange1Url.Name = "trendExchange1Url";
-            this.trendExchange1Url.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange1Url.Size = new System.Drawing.Size(41, 13);
             this.trendExchange1Url.TabIndex = 1;
             this.trendExchange1Url.Text = "label45";
             // 
@@ -646,7 +643,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange1PercentageVolume.AutoSize = true;
             this.trendExchange1PercentageVolume.Location = new System.Drawing.Point(439, 1);
             this.trendExchange1PercentageVolume.Name = "trendExchange1PercentageVolume";
-            this.trendExchange1PercentageVolume.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange1PercentageVolume.Size = new System.Drawing.Size(41, 13);
             this.trendExchange1PercentageVolume.TabIndex = 4;
             this.trendExchange1PercentageVolume.Text = "label46";
             // 
@@ -670,7 +667,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange2Name.AutoSize = true;
             this.trendExchange2Name.Location = new System.Drawing.Point(3, 0);
             this.trendExchange2Name.Name = "trendExchange2Name";
-            this.trendExchange2Name.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange2Name.Size = new System.Drawing.Size(41, 13);
             this.trendExchange2Name.TabIndex = 0;
             this.trendExchange2Name.Text = "label47";
             // 
@@ -679,7 +676,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange2Url.AutoSize = true;
             this.trendExchange2Url.Location = new System.Drawing.Point(177, 0);
             this.trendExchange2Url.Name = "trendExchange2Url";
-            this.trendExchange2Url.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange2Url.Size = new System.Drawing.Size(41, 13);
             this.trendExchange2Url.TabIndex = 1;
             this.trendExchange2Url.Text = "label48";
             // 
@@ -703,7 +700,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange3Name.AutoSize = true;
             this.trendExchange3Name.Location = new System.Drawing.Point(3, 0);
             this.trendExchange3Name.Name = "trendExchange3Name";
-            this.trendExchange3Name.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange3Name.Size = new System.Drawing.Size(41, 13);
             this.trendExchange3Name.TabIndex = 0;
             this.trendExchange3Name.Text = "label49";
             // 
@@ -712,7 +709,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange3Url.AutoSize = true;
             this.trendExchange3Url.Location = new System.Drawing.Point(177, 0);
             this.trendExchange3Url.Name = "trendExchange3Url";
-            this.trendExchange3Url.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange3Url.Size = new System.Drawing.Size(41, 13);
             this.trendExchange3Url.TabIndex = 1;
             this.trendExchange3Url.Text = "label50";
             // 
@@ -721,7 +718,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange2PercentageVolume.AutoSize = true;
             this.trendExchange2PercentageVolume.Location = new System.Drawing.Point(439, 58);
             this.trendExchange2PercentageVolume.Name = "trendExchange2PercentageVolume";
-            this.trendExchange2PercentageVolume.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange2PercentageVolume.Size = new System.Drawing.Size(41, 13);
             this.trendExchange2PercentageVolume.TabIndex = 7;
             this.trendExchange2PercentageVolume.Text = "label51";
             // 
@@ -730,7 +727,7 @@ namespace EcoCoinMarketPlace
             this.trendExchange3PercentageVolume.AutoSize = true;
             this.trendExchange3PercentageVolume.Location = new System.Drawing.Point(439, 115);
             this.trendExchange3PercentageVolume.Name = "trendExchange3PercentageVolume";
-            this.trendExchange3PercentageVolume.Size = new System.Drawing.Size(54, 17);
+            this.trendExchange3PercentageVolume.Size = new System.Drawing.Size(41, 13);
             this.trendExchange3PercentageVolume.TabIndex = 8;
             this.trendExchange3PercentageVolume.Text = "label52";
             // 
@@ -756,7 +753,7 @@ namespace EcoCoinMarketPlace
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 29);
+            this.label8.Size = new System.Drawing.Size(120, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Trend Coins";
             // 
@@ -846,7 +843,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin1Name.Location = new System.Drawing.Point(3, 0);
             this.trendCoin1Name.Name = "trendCoin1Name";
             this.trendCoin1Name.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin1Name.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin1Name.Size = new System.Drawing.Size(61, 33);
             this.trendCoin1Name.TabIndex = 0;
             this.trendCoin1Name.Text = "label12";
             // 
@@ -856,7 +853,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin1Symbol.Location = new System.Drawing.Point(177, 0);
             this.trendCoin1Symbol.Name = "trendCoin1Symbol";
             this.trendCoin1Symbol.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin1Symbol.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin1Symbol.Size = new System.Drawing.Size(61, 33);
             this.trendCoin1Symbol.TabIndex = 1;
             this.trendCoin1Symbol.Text = "label13";
             // 
@@ -866,7 +863,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin1Price.Location = new System.Drawing.Point(434, 1);
             this.trendCoin1Price.Name = "trendCoin1Price";
             this.trendCoin1Price.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin1Price.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin1Price.Size = new System.Drawing.Size(61, 33);
             this.trendCoin1Price.TabIndex = 4;
             this.trendCoin1Price.Text = "label14";
             // 
@@ -891,7 +888,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin2Name.Location = new System.Drawing.Point(3, 0);
             this.trendCoin2Name.Name = "trendCoin2Name";
             this.trendCoin2Name.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin2Name.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin2Name.Size = new System.Drawing.Size(61, 33);
             this.trendCoin2Name.TabIndex = 0;
             this.trendCoin2Name.Text = "label15";
             // 
@@ -901,7 +898,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin2Symbol.Location = new System.Drawing.Point(174, 0);
             this.trendCoin2Symbol.Name = "trendCoin2Symbol";
             this.trendCoin2Symbol.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin2Symbol.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin2Symbol.Size = new System.Drawing.Size(61, 33);
             this.trendCoin2Symbol.TabIndex = 1;
             this.trendCoin2Symbol.Text = "label16";
             // 
@@ -926,7 +923,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin3Name.Location = new System.Drawing.Point(3, 0);
             this.trendCoin3Name.Name = "trendCoin3Name";
             this.trendCoin3Name.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin3Name.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin3Name.Size = new System.Drawing.Size(61, 33);
             this.trendCoin3Name.TabIndex = 0;
             this.trendCoin3Name.Text = "label18";
             // 
@@ -936,7 +933,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin3Symbol.Location = new System.Drawing.Point(174, 0);
             this.trendCoin3Symbol.Name = "trendCoin3Symbol";
             this.trendCoin3Symbol.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin3Symbol.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin3Symbol.Size = new System.Drawing.Size(61, 33);
             this.trendCoin3Symbol.TabIndex = 1;
             this.trendCoin3Symbol.Text = "label19";
             // 
@@ -946,7 +943,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin3Price.Location = new System.Drawing.Point(434, 115);
             this.trendCoin3Price.Name = "trendCoin3Price";
             this.trendCoin3Price.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin3Price.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin3Price.Size = new System.Drawing.Size(61, 33);
             this.trendCoin3Price.TabIndex = 8;
             this.trendCoin3Price.Text = "label20";
             // 
@@ -956,7 +953,7 @@ namespace EcoCoinMarketPlace
             this.trendCoin2Price.Location = new System.Drawing.Point(434, 58);
             this.trendCoin2Price.Name = "trendCoin2Price";
             this.trendCoin2Price.Padding = new System.Windows.Forms.Padding(10);
-            this.trendCoin2Price.Size = new System.Drawing.Size(74, 37);
+            this.trendCoin2Price.Size = new System.Drawing.Size(61, 33);
             this.trendCoin2Price.TabIndex = 7;
             this.trendCoin2Price.Text = "label17";
             // 
@@ -975,12 +972,8 @@ namespace EcoCoinMarketPlace
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 7, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 8, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 7, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1030,78 +1023,13 @@ namespace EcoCoinMarketPlace
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(394, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(10);
-            this.label2.Size = new System.Drawing.Size(294, 68);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "CryptoCurrency";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(694, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(10);
-            this.label3.Size = new System.Drawing.Size(207, 68);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Exchanges";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(907, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(10);
-            this.label4.Size = new System.Drawing.Size(192, 68);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Favourite";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1105, 0);
+            this.label6.Location = new System.Drawing.Point(394, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(1269, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(10);
-            this.label5.Size = new System.Drawing.Size(132, 68);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Login";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(1419, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(10);
-            this.label7.Size = new System.Drawing.Size(159, 68);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "SignUp";
             // 
             // tableLayoutPanel1
             // 
@@ -1357,11 +1285,24 @@ namespace EcoCoinMarketPlace
             this.coinRow20.Size = new System.Drawing.Size(1617, 27);
             this.coinRow20.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(558, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 67);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Go Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1631, 796);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Form1";
             this.Text = "CryptoCurrency";
             this.trendCoinsTableLayoutPanel.ResumeLayout(false);
@@ -1476,12 +1417,7 @@ namespace EcoCoinMarketPlace
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private UIComponents.CoinRow coinRow2;
@@ -1504,6 +1440,7 @@ namespace EcoCoinMarketPlace
         private UIComponents.CoinRow coinRow18;
         private UIComponents.CoinRow coinRow19;
         private UIComponents.CoinRow coinRow20;
+        private System.Windows.Forms.Button button1;
     }
 }
 
