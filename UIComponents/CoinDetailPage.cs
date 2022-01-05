@@ -14,6 +14,7 @@ namespace EcoCoinMarketPlace.UIComponents
         private string CoinName;
         private const String baseWSUrl = "wss://ws.coincap.io/prices?assets=";
         DailyCoins dailyCoinData;
+        public bool isRegistered;
 
         WebSocket webSocket;
         Coin coin;
@@ -81,6 +82,9 @@ namespace EcoCoinMarketPlace.UIComponents
             coinRealTimePrice.Text = CoinPrice;
         }
 
-       
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

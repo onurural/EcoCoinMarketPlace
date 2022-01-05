@@ -1,4 +1,5 @@
-﻿using EcoCoinMarketPlace.Models.Coins;
+﻿using EcoCoinMarket.Models.LoginRegister;
+using EcoCoinMarketPlace.Models.Coins;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,12 @@ namespace EcoCoinMarketPlace.UIComponents
 {
     public partial class CoinRow : UserControl
     {
+        public bool isRegistered;
 
 
-
-        public CoinRow()
+        public CoinRow(bool isRegistered)
         {
+            this.isRegistered = isRegistered;
             InitializeComponent();
 
 
@@ -27,46 +29,208 @@ namespace EcoCoinMarketPlace.UIComponents
         private void coinMenuCoin1Rank_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered) { 
+            coinDetailPage.Show();}
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
+
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+                    
+                }
+
+
+            }
+            
         }
 
         private void coinMenuCoin1Name_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                  
+                    Login login = new Login();
+                    login.ShowDialog();
 
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+
+            }
+            
         }
 
         private void coinMenuCoin1Price_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
+
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+                
+            }
         }
 
         private void coinMenuCoin124HPercentage_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
+
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+
+            }
+            
         }
 
         private void coinMenuCoin1MarketCap_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
+
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+
+            }
+            
         }
 
         private void coinMenuCoin1Volume_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
 
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+
+            }
+            
         }
 
         private void coinMenuCoin1CirculatingSupply_Click(object sender, EventArgs e)
         {
             CoinDetailPage coinDetailPage = new CoinDetailPage(coinMenuCoin1Name.Text.ToLower());
-            coinDetailPage.Show();
+            if (isRegistered)
+            {
+                coinDetailPage.Show();
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show("Please Login", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    this.Hide();
+                    
+                    Login login = new Login();
+                    login.ShowDialog();
 
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    this.Hide();
+
+                }
+
+
+            }
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

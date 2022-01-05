@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace EcoCoinMarket.Models.LoginRegister
@@ -32,7 +33,7 @@ namespace EcoCoinMarket.Models.LoginRegister
                 {
                     dr.Close();
                     this.Hide();
-                    Form1 home = new Form1();
+                    Form1 home = new Form1(true);
                     home.ShowDialog();
                 }
                 else
@@ -60,6 +61,17 @@ namespace EcoCoinMarket.Models.LoginRegister
             this.Hide();
             Register registration = new Register();
             registration.ShowDialog();
+        }
+
+        private void Unregistered_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            Thread.Sleep(1000);
+            Form1 home = new Form1(false);
+            home.ShowDialog();
+            this.Hide();
+
         }
     }
     }
