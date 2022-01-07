@@ -151,7 +151,7 @@ Onur Ural - [@onururallll](https://twitter.com/onururalll) - onurural57@gmail.co
 
 Berke Genckaya - [@Berke_genckaya](https://twitter.com/Berke_genckaya) 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/onurural/EcoCoinMarketPlace)
+Project Link: [https://github.com/onurural/EcoCoinMarketPlace](https://github.com/onurural/EcoCoinMarketPlace)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
