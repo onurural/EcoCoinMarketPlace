@@ -79,7 +79,6 @@
     </Compile>
     <Compile Include="Models\Coins\Coin.cs" />
     <Compile Include="Models\Coins\CoinDaily.cs" />
-    <Compile Include="Models\Coins\Coins.cs" />
     <Compile Include="Models\Exchange.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Program.cs" />

@@ -27,7 +27,6 @@ namespace EcoCoinMarketPlace
                 FillTopThreeExchange();
                 FillCoinMainMenu();
 
-
             }
             else
             {

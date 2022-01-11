@@ -13,9 +13,8 @@ namespace EcoCoinMarketPlace.UIComponents
         public string CoinPrice;
         private string CoinName;
         private const String baseWSUrl = "wss://ws.coincap.io/prices?assets=";
-        DailyCoins dailyCoinData;
+        DailyCoin dailyCoinData;
         public bool isRegistered;
-
         WebSocket webSocket;
         Coin coin;
         public CoinDetailPage(string coinMenuCoin1Name)
@@ -49,7 +48,7 @@ namespace EcoCoinMarketPlace.UIComponents
         {
             for (int i = 0; i < 363; i++)
             {
-                chart1.Series["PriceDaily"].Points.AddXY(dailyCoinData.Data[i].Date.ToString().Substring(0, 10), dailyCoinData.Data[i].PriceUsdDaily);
+                chart1.Series["PriceDaily"].Points.AddXY(dailyCoinData.Data[i].Date.ToString().Substring(0, 10), dailyCoinData.Data[i].PriceUsd);
 
 
             }

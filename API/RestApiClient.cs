@@ -60,13 +60,13 @@ namespace EcoCoinMarketPlace.API
 
 
         // Where the magic happens...
-        public IModel MakeRequest(RequestType requestType, string CoinName = "bitcoin")
+        public IModel<T> MakeRequest<T>(RequestType requestType, string CoinName = "bitcoin")
         {
             string EndPoint;
             EndPoint = baseApiUrl + "/" + requestType.ToString().ToLower();
             if (requestType == RequestType.history)
             {
-                EndPoint = baseApiUrl + "/assets" +"/"+ CoinName.ToLower() + "/history?interval=d1";
+                EndPoint = baseApiUrl + "/assets" + "/" + CoinName.ToLower() + "/history?interval=d1";
             }
 
             // Creating object using .Create method and Casting to HttpWebRequest type
@@ -106,16 +106,16 @@ namespace EcoCoinMarketPlace.API
                     switch (requestType)
                     {
                         case RequestType.assets:
-                            Coins coin = Coins.FromJson(apiResponseMessage);
-                            return coin;
+                            IModel<Coin> coin = new Coin(); // Polymorphism
+                            return (IModel<T>)coin.FromJson(apiResponseMessage);
 
                         case RequestType.history:
-                            DailyCoins CoinDailyDataList = DailyCoins.FromJson(apiResponseMessage);
-                            return CoinDailyDataList;
+                            IModel<DailyCoin> CoinDailyDataList = new DailyCoin();
+                            return (IModel<T>)CoinDailyDataList.FromJson(apiResponseMessage);
 
                         case RequestType.exchanges:
-                            Exchanges exchange = Exchanges.FromJson(apiResponseMessage);
-                            return exchange;
+                            IModel<Exchange> exchange = new Exchange();
+                            return (IModel<T>)exchange.FromJson(apiResponseMessage);
                         default:
                             throw new Exception();
 
@@ -123,7 +123,6 @@ namespace EcoCoinMarketPlace.API
 
                 }
             }
-
         }
 
 
