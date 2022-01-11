@@ -9,23 +9,13 @@ using System.Threading.Tasks;
 
 namespace EcoCoinMarketPlace.Controller
 {
-    enum CoinType
-    {
-
-        bitcoin,
-        etherium,
-        dogecoin
-
-    }
-
-
 
     class RestApiController
     {
 
         static RestApiClient restApiClient;
-        static private Coins coins;
-        static private Exchanges exchanges;
+        static private Coin coins;
+        static private Exchange exchanges;
 
 
         public static bool InitializeRestfulApi()
@@ -44,8 +34,8 @@ namespace EcoCoinMarketPlace.Controller
 
         public static Coin GetCoinData(string coin)
         {
-            Coin coin1 = new Coin() ;
-            for (int i = 0; i<coins.Data.Count; i++)
+            Coin coin1 = new Coin();
+            for (int i = 0; i < coins.Data.Count; i++)
             {
                 if (coins.Data[i].Name.ToLower() == coin)
                 {
@@ -61,18 +51,18 @@ namespace EcoCoinMarketPlace.Controller
             switch (requestType)
             {
                 case RequestType.assets:
-                    coins = (Coins)restApiClient.MakeRequest(requestType);
+                    coins = (Coin)restApiClient.MakeRequest<Coin>(requestType);
                     break;
                 case RequestType.exchanges:
-                    exchanges = (Exchanges)restApiClient.MakeRequest(requestType);
+                    exchanges = (Exchange)restApiClient.MakeRequest<Exchange>(requestType);
                     break;
             }
 
         }
 
-        public static DailyCoins GetCoinDailyData(string CoinName)
+        public static DailyCoin GetCoinDailyData(string CoinName)
         {
-            return (DailyCoins)restApiClient.MakeRequest(RequestType.history, CoinName);
+            return (DailyCoin)restApiClient.MakeRequest<DailyCoin>(RequestType.history, CoinName);
 
         }
 
@@ -112,14 +102,6 @@ namespace EcoCoinMarketPlace.Controller
             return coinList;
 
         }
-
-
-
-
-
-
-
-
 
     }
 }
