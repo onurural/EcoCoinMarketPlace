@@ -142,6 +142,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p> -->
 
+ ![Screenshot](loginScreen.PNG)
+ ![Screenshot](mainScreen.PNG)
+ ![Screenshot](registerScreen.PNG)
+ ![Screenshot](detailedPage.PNG)
+
 
 
 <!-- CONTACT -->
